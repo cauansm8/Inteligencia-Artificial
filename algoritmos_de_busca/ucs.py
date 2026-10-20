@@ -8,6 +8,10 @@ fila de prioridade ordenada por custo -> heap
 adequada quando ações possuem custos diferentes
 
 em grafo
+
+g(n) = custo acumulado do início até n
+
+f(n) = g(n)
 """
 
 
