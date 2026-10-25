@@ -11,7 +11,7 @@ Busca gulosa = escolhe o nó com menor h(n) - considera apenas a estimativa rest
 Busca A* = escolhe o nó com menor f(n) - considera o custo acumulado e a estimativa
 
 f(n) = h(n)
-
+h(n) = função heurística (manhattan, euclidiana)
 """
 
 
