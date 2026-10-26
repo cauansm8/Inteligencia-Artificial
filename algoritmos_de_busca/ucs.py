@@ -30,11 +30,19 @@ def UCS(grafo, raiz, destino):
 
     resultados = []
 
+    visitados = set()
+
     while hp:
 
         print(f"Filha de prioridade: {hp}")
 
         custo_acumulado, tmp = heapq.heappop(hp)
+
+        if tmp[-1] in visitados:
+            continue
+
+        # Marca o nó atual como visitado
+        visitados.add(tmp[-1])
 
         # se a última letra do caminho (nó atual) for o destino - encontramos um caminho
         if tmp[-1] == destino:
@@ -43,12 +51,12 @@ def UCS(grafo, raiz, destino):
             resultados.append((custo_acumulado, tmp))
             encontrado = True
 
-        # buscamos as ligações do nó atual
-        ligacoes = grafo[tmp[-1]]
-
         # joga no heap as ligações do nó atual com os caminhos + custo
-        for i in range (len(ligacoes)):
-            heapq.heappush(hp, (custo_acumulado + ligacoes[i][1], f'{tmp}{ligacoes[i][0]}'))
+        for vizinho, custo_aresta in grafo.get(tmp[-1], []):
+            if vizinho not in visitados:
+                novo_custo = custo_acumulado + custo_aresta
+                novo_caminho = f"{tmp}{vizinho}"
+                heapq.heappush(hp, (novo_custo, novo_caminho))
 
     if encontrado == False:
         print("Não encontrado!")
