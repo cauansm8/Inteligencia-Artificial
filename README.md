@@ -10,5 +10,8 @@ Professor: Danillo Roberto Pereira
     - Tabular: jogo "Pegue a fruta"
     - Aproximação linear: jogo GraphWar
 
-- Regressão linear: simples e múltipla
-
+- Regressão linear:
+    - Simples
+    - Múltipla
+    - Simples polinomial
+    - Gradiente Descendente
