@@ -18,3 +18,5 @@ Professor: Danillo Roberto Pereira
 
 - Árvore de decisão:
     - ID3
+
+- Regressão Logística
