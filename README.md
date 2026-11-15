@@ -15,3 +15,6 @@ Professor: Danillo Roberto Pereira
     - Múltipla
     - Simples polinomial
     - Gradiente Descendente
+
+- Árvore de decisão:
+    - ID3
