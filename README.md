@@ -20,3 +20,7 @@ Professor: Danillo Roberto Pereira
     - ID3
 
 - Regressão Logística
+
+- K-Vizinhos mais próximos (kNN)
+    - Classificação
+    - Regressão
